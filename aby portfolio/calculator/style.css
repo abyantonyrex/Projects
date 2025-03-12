@@ -1,0 +1,169 @@
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 30px;
+  width: 310px;
+  position: relative;
+  left: 48%;
+  transform: translateX(-50%);
+  background-color:#000000;
+  box-shadow: 0 0 15px 3px black;
+}
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  width: 45px;
+  height: 45px;
+}
+
+.container div {
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+  width: max-content;
+}
+#screen {
+  border: 3px solid white;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 300px;
+    height: 75px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0,);
+filter: drop-shadow(0 0 0.2rem white);
+
+}
+.btn1,
+.btn2,
+.btn3,
+.btn4,
+.btn5,
+.btn6,
+.btn7,
+.btn8,
+.btn9,
+.btn0,
+.btnadd,
+.btnsub,
+.btnmul,
+.btndiv,
+.btnAc,
+.btnclear,
+.btndot,
+.btnequl {
+  background-color: grey;
+  filter: drop-shadow(0 0 0.2rem white);
+  
+}
+.btn0 {
+  position: absolute;
+  left: 19px;
+  top: 545px;
+}
+.btndot {
+  position: absolute;
+  left: 38%;
+  top: 545px;
+}
+.btnequl {
+  position: absolute;
+  left: 68%;
+  top: 545px;
+}
+
+.btn1 {
+  position: absolute;
+  left: 19px;
+  top: 460px;
+}
+.btn2 {
+  position: absolute;
+  left: 38%;
+  top: 460px;
+}
+.btn3 {
+  position: absolute;
+  left: 68%;
+  top: 460px;
+  z-index: 1;
+}
+.btn4 {
+  position: absolute;
+  left: 19px;
+  top: 370px;
+}
+.btn5 {
+  position: absolute;
+  left: 38%;
+  top: 370px;
+}
+.btn6 {
+  position: absolute;
+  left: 68%;
+  top: 370px;
+}
+.btn7 {
+  position: absolute;
+  left: 19px;
+  top: 285px;
+}
+.btn8 {
+  position: absolute;
+  left: 38%;
+  top: 285px;
+}
+.btn9 {
+  position: absolute;
+  left: 68%;
+  top: 285px;
+}
+.btnadd {
+  position: absolute;
+  left: 19px;
+  top: 195px;
+}
+.btnsub {
+  position: absolute;
+  left: 37%;
+  top: 195px;
+}
+.btnmul {
+  position: absolute;
+  left: 68%;
+  top: 195px;
+}
+.btndiv {
+  position: absolute;
+  left: 19px;
+  top: 105px;
+}
+.btnclear {
+  position: absolute;
+  left: 37%;
+  top:105px;
+}
+.btnAc {
+  position: absolute;
+  left: 68%;
+  top: 105px;
+}
