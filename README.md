@@ -21,6 +21,6 @@ I'm a passionate backend developer currently working on **AbyCart**, building it
 
 ## 📫 Connect with Me
 - **GitHub**: (https://github.com/AbyAntonyRex)
-- **LinkedIn**: (https://linkedin.com/in/AbyAntonyRex)
+- **LinkedIn**: (https://linkedin.com/in/aby-antony-rex)
 
 Let's connect and collaborate! 🚀
