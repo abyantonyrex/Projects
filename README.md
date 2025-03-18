@@ -7,7 +7,7 @@ I'm a passionate backend developer currently working on **AbyCart**, building it
 - **Backend**: Node.js, Express.js
 - **Database**: MySQL,MongoDB
 - **Version Control**: Git & GitHub
-- **Other Skills**: Java, Eclipse Photon, Tomcat 9
+- **Other Skills**: Java, Eclipse Photon,Eclipse Enterprise, Tomcat 9
 
 ## 💡 What I'm Learning
 - Mastering backend development
