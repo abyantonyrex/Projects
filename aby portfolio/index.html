@@ -11,29 +11,22 @@
 
 <body>
     <nav>
-        <h1>Portfolio</h1>
+        <bold class="title">Portfolio</bold>
         <ul>
-            <a href="#">
-                <li>About Me</li>
-            </a>
-            <a href="#skill-a">
-                <li>Skills</li>
-            </a>
-            <a href="#projects">
-                <li>Projects</li>
-            </a>
-            <a href="#social-links">
-                <li>Contact Me</li>
-            </a>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#skill-a">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#social-links">Contact Me</a></li>
         </ul>
         <button id="resume-btn">Download Resume</button>
     </nav>
+    
 
     <section id="about-me">
         <h1>About Me</h1>
-        <img id="profile-pic" src="/img/Aby Photo.jpg" alt="aby pic">
+        <img id="profile-pic" src="img/aby ghibili pic.png" alt="aby pic">
         <h2>Hi, I'm Aby Antony Rex</h2>
-        <p>
+        <p class="about-aby">
             a Passionate web developer with a keen interest in learning new technologies and frameworks. I have a good
             understanding of front-end technologies like HTML, CSS, JavaScript, and React. I am also familiar with
             back-end technologies like Node.js, Express, and MongoDB. I am a quick learner and a team player who is
@@ -48,54 +41,65 @@
         <div class="skills-inner">
 
             <div id="sk">
-                <img class="skill-img" src="/img/html-png-removebg-preview.png" alt="HTML">
+                <img class="skill-img" src="img/html-png-removebg-preview.png" alt="HTML">
                 <span>HTML</span>
+                <p class="hover-content">HTML (HyperText Markup Language) structures and presents content on the web.</p>
             </div>
-
+            
             <div id="sk">
-                <img class="skill-img" src="/img/css-png-removebg-preview.png" alt="CSS">
+                <img class="skill-img" src="img/css-png-removebg-preview.png" alt="CSS">
                 <span>CSS</span>
+                <p class="hover-content">CSS (Cascading Style Sheets) styles web pages by controlling layout and design.</p>
             </div>
-
+            
             <div id="sk">
-                <img class="skill-img" src="/img/js-png-removebg-preview.png" alt="JavaScript">
+                <img class="skill-img" src="img/js-png-removebg-preview.png" alt="JavaScript">
                 <span>JavaScript</span>
+                <p class="hover-content">JavaScript enables interactivity and dynamic behavior in web pages.</p>
             </div>
-
+            
             <div id="sk">
-                <img class="skill-img" src="/img/react-png-removebg-preview.png" alt="React">
+                <img class="skill-img" src="img/react-png-removebg-preview.png" alt="React">
                 <span>React</span>
+                <p class="hover-content">React is a JavaScript library for building UI components efficiently.</p>
             </div>
-
+            
             <div id="sk">
-                <img class="skill-img" src="/img/node-png-removebg-preview.png" alt="Node JS">
+                <img class="skill-img" src="img/node-png-removebg-preview.png" alt="Node JS">
                 <span>Node JS</span>
+                <p class="hover-content">Node.js allows JavaScript to run on the server side for backend development.</p>
             </div>
-
+            
             <div id="sk">
-                <img class="skill-img" src="/img/express-png-removebg-preview.png" alt="Express JS">
+                <img class="skill-img" src="img/express-png-removebg-preview.png" alt="Express JS">
                 <span>Express JS</span>
+                <p class="hover-content">Express.js is a minimal web framework for building APIs with Node.js.</p>
             </div>
-
+            
             <div id="sk">
-                <img class="skill-img" src="/img/mysql-png-removebg-preview.png" alt="My SQL">
+                <img class="skill-img" src="img/mysql-png-removebg-preview.png" alt="MySQL">
                 <span>MySQL</span>
+                <p class="hover-content">MySQL is a relational database system used for structured data storage.</p>
             </div>
-
+            
             <div id="sk">
-                <img class="skill-img" src="/img/mongodb-removebg-preview (1).png" alt="My SQL">
+                <img class="skill-img" src="img/mongodb-removebg-preview (1).png" alt="MongoDB">
                 <span>MongoDB</span>
+                <p class="hover-content">MongoDB is a NoSQL database that stores data in flexible JSON-like documents.</p>
             </div>
-
+            
             <div id="sk">
-                <img class="skill-img" src="/img/java-png-removebg-preview.png" alt="Java">
+                <img class="skill-img" src="img/java-png-removebg-preview.png" alt="Java">
                 <span>Java</span>
+                <p class="hover-content">Java is a versatile programming language for building applications.</p>
             </div>
-
+            
             <div id="sk">
-                <img class="skill-img" src="/img/springboot-png-removebg-preview.png" alt="Spring boot">
-                <span>Spring boot</span>
+                <img class="skill-img" src="img/springboot-png-removebg-preview.png" alt="Spring boot">
+                <span>Spring Boot</span>
+                <p class="hover-content">Spring Boot simplifies Java backend development with built-in tools.</p>
             </div>
+            
 
         </div>
     </section>
@@ -103,30 +107,29 @@
     <section id="projects">
         <h1>Projects</h1>
         <div class="projects-inner">
-            <div id="proj">
-                <img class="project-img" src="/img/abycart.png" alt="Project 1"> <br>
-                <span>Project 1</span>
-
+            <div class="project" data-project-url="https://abycart.netlify.app/">
+                <img class="project-img" src="img/abycart.png" alt="AbyCart"> <br>
+                <span>AbyCart</span>
             </div>
-
-            <div id="proj">
-                <img class="project-img" src="/img/calci1.png" alt="Project 2"> <br>
-                <span>Project 2</span>
-
+    
+            <div class="project" data-project-url="https://abycalculator.netlify.app/">
+                <img class="project-img" src="img/calci1.png" alt="Calculator"> <br>
+                <span>Calculator</span>
             </div>
-            <div id="proj">
-                <img class="project-img" src="/img/abycart.png" alt="Project 2"> <br>
-                <span>Project 2</span>
-
+    
+            <div class="project" data-project-url="https://abycart.netlify.app/">
+                <img class="project-img" src="img/abycart.png" alt="Project 3"> <br>
+                <span>Project 3</span>
             </div>
-
+        </div>
     </section>
+    
 
     <footer>
         <nav id="social-links">
             <div class="social-links">
                 <h1>Contact Me</h1>
-                <a href="#" class="social">
+                <a href="https://github.com/abyantonyrex/Projects" class="social">
                     <i class="fab fa-github"></i>
                     <span>github</span>
                 </a>
@@ -149,7 +152,7 @@
 
 
 
-    <script src="/script.js"></script>
+    <script src="/aby portfolio/script.js"></script>
 </body>
 
 </html>
