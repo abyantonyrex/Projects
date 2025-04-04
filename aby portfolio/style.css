@@ -84,7 +84,59 @@ li {
   transform: scale(1.1);
   transition: ease-in-out 0.5s;
 }
+.about-me{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+ 
+}
+.skill-anchor{
+  position: relative;
+  top: 250px;
+  
+}
+.about-section{
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
 .about-aby {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+.about-title{
+  position: relative;
+  top: 120px;
+  right: 150px;
+  max-width: fit-content;
+}
+.about-image{
+  position: relative;
+  bottom: 150px;
+  left: 300px;
+}
+h2{
+  width: 500px;
+}
+.about-paragraph{
+  position: relative;
+  bottom: 200px;
+  left: 100px;
+ text-align: justify;
+  max-width: 1200px;
+}
+.about-heading{
+  position: relative;
+  bottom: 300px;
+  left: 230px;
+  font-size: 1.5rem;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.about-aby-paragraph {
   font-size: 1.7rem;
   padding: 3%;
   padding-top: 4%;
@@ -93,13 +145,8 @@ li {
   word-spacing: 8px;
 }
 h1 {
-  font-size: 2.5rem;
-  padding: 3%;
-  text-align: center;
-}
-h2 {
-  font-size: 2rem;
-  padding-top: 30px;
+  font-size: 4rem;
+  padding: 5%;
   text-align: center;
 }
 .skills-inner {
@@ -112,6 +159,16 @@ h2 {
   border-radius: 10px;
   animation: float 3s ease-in-out infinite;
   cursor: pointer;
+}
+@keyframes scrollup {
+  from{
+    opacity: 0;
+    scale: 0.4;
+  }
+  to{
+    opacity: 1;
+    scale: 1
+}
 }
 
 @keyframes rotate {
@@ -159,6 +216,7 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
+  
 }
 
 #sk:hover .skill-img,
@@ -172,13 +230,14 @@ a {
   transition: opacity 1s ease-in-out;
 }
 
-span {
-  font-size: 1.5rem;
+.skill-span {
+  font-size: 1.8rem;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   position: relative;
   top: 10px;
-  width: 80px;
+  left: -0px;
+  width: 200px;
   transition: opacity 1s ease-in-out;
 }
 
@@ -243,8 +302,12 @@ span {
   align-items: center;
   font-size: 1.2rem;
   padding: 10px;
-  padding-top: 5%;
+  position: relative;
+  bottom: 100px;
   text-align: center;
+  animation: scrollup ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
 }
 
 .projects-inner {
@@ -276,40 +339,103 @@ span {
   align-items: center;
   font-size: 1.2rem;
   padding: 10px;
-  padding-top: 5%;
+  padding-bottom: 10%;
   text-align: center;
+ 
 }
-.project {
+.project1 {
   padding: 50px;
-}
-.social-links {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--dark-bg);
-  color: var(--font-color);
-  font-size: 2.5rem;
-  position: relative;
-}
-.social span {
-  font-size: 1.5rem;
-  color: var(--font-color);
-  margin-left: 25px;
-  font-weight: bold;
-  position: absolute;
-  top: 15px;
-}
-.social-links h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  padding: 10px;
+  animation: slideInFromLeft 1s ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
+.project2 {
+  padding: 50px;
+  animation: slideInFromThat 1s ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+}
+
+.project3 {
+  padding: 50px;
+  animation: slideInFromRight 1s ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.project-span{
+  font-size: 2rem;
+  position: relative;
+  top: 10px;
+  left: 0px;
+}
+
+nav h1 {
+  font-size: 2.5rem;
+  padding: 10px;
+  position: relative;
+  right: 5%;
+  font-weight: bold;
+  margin-right: 50px;
+  padding-right: 10%;
+}
+#social-links{
+  height: 25vh;
+}
+.social-links{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
+  column-gap: 300px;
+  position: relative;
+  right: 20%;
+  animation: scrollup ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 50% cover 0%;
+}
+i{
+  font-size: 3rem;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromThat {
+  0% {
+   
+    opacity: 0;
+  }
+  100% {
+   
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+span{
+  font-size: 2rem;
+  text-transform: capitalize;
+  position: relative;
+  top: 0px;
+  left: 30px;
+  
+}
 @media screen {
   @media screen and (max-width: 768px) {
     body,
