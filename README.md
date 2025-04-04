@@ -16,7 +16,7 @@ I'm a passionate backend developer currently working on **AbyCart**, building it
 - Exploring best practices in **Git** and **version control**
 
 ## 🎯 Goals
-- Build scalable and efficient backend systems
+- Build scalable and efficient Frontend + backend systems
 - Contribute to open-source projects
 - Keep learning and growing as a developer
 
