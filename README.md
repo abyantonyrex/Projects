@@ -4,7 +4,8 @@
 I'm a passionate backend developer currently working on **AbyCart**, building its backend using **Node.js, Express, and MySQL**. I have a background in **Electronics and Communication Engineering (ECE)** and love solving coding challenges in **Java**.
 
 ## 🔧 Tech Stack
-- **Backend**: Node.js, Express.js
+- **Frontend**: HTML, CSS, React.js
+- **Backend**: Node.js, Express.js, Springboot
 - **Database**: MySQL,MongoDB
 - **Version Control**: Git & GitHub
 - **Other Skills**: Java, Eclipse Photon,Eclipse Enterprise, Tomcat 9
