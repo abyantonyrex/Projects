@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@react-spring/web": "^9.7.5",
+    "@tailwindcss/cli": "^4.1.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.2"
+  }
+}

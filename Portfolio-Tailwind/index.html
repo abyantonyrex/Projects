@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="./input.css">
+  <link rel="stylesheet" href="./dist/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+  
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .slideInFromLeft {
+      animation: slideInFromLeft 1s ease-out;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+
+    @-webkit-keyframes slideInFromTop {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromTop {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .slideInFromTop {
+      -webkit-animation: slideInFromTop 1s ease-out;
+      animation: slideInFromTop 1s ease-out;
+    }
+
+    @keyframes slideInFromRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .slideInFromRight {
+      animation: slideInFromRight 1s ease-out;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+  </style>
+</head>
+
+<body class="p-0 m-0  ">
+  <!-- portfolio -->
+  <nav id="sidebar" class=""
+    style="position: fixed; top: 0; right: 0; height: 100vh; width: 250px; z-index: 999; box-shadow: var(--box-shadow-bg);">
+    <ul class="font-medium text-2xl w-full flex flex-col items-start justify-start">
+      <li onclick="hideSideBar()" class="py-5 px-10">
+        <a class="flex justify-center" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#00fffb">
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg>
+        </a>
+      </li>
+      <li class="p-8 text-4xl w-full hover:bg-gray-500" style="color: var(--font-color);">
+        <a class="flex justify-center" href="#">About</a>
+      </li>
+      <li class="p-8 text-4xl w-full hover:bg-gray-500" style="color: var(--font-color);">
+        <a class="flex justify-center" href="#skills">Skills</a>
+      </li>
+      <li class="p-8 text-4xl w-full hover:bg-gray-500" style="color: var(--font-color);">
+        <a class="flex justify-center" href="#projects">Projects</a>
+      </li>
+      <li class="p-8 text-4xl w-full hover:bg-gray-500" style="color: var(--font-color);">
+        <a class="flex justify-center" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <nav id="main-bars" class="bg-black  p-4 " style="color: var(--font-color); ">
+    <ul class="flex space-x-4 flex-row items-center justify-end text-2xl font-bold">
+      <li id="logo" class="px-10  mr-auto text-3xl md:text-2xl"><a href="#">Portfolio</a></li>
+      <li class="hideOnMobile"><a href="#">About</a></li>
+      <li class="hideOnMobile"><a href="#skills">Skills</a></li>
+      <li class="hideOnMobile"><a href="#projects">Projects</a></li>
+      <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+      <li id="menu-bar" onclick="showSideBar()" class="py-5  px-10 rounded-xl"
+        style="background-color: var(--bg-blue);"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+            viewBox="0 -960 960 960" width="26px" fill="#000000">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg></a></li>
+
+      <li>
+        <button id="CV-button" class="resume-btn " type="button" aria-label="Download CV">
+          Download CV
+        </button>
+      </li>
+
+    </ul>
+  </nav>
+
+  <section>
+    <div>
+      <div id="about-me" class="flex justify-center items-center mt-10 mb-10 text-6xl">
+        <h1>About Me</h1>
+      </div>
+
+      <div class="flex flex-col gap-2 p-8 sm:p-8 sm:items-center   place-content-start  ">
+        <div id="profile-card"
+          class="flex items-center gap-4 p-10 border border-gray-200 rounded-lg  shadow-xl hover:shadow-2xl hover:cursor-pointer  ">
+          <img class="h-56 w-56 rounded-full aby-img" src="./src/img/aby ghibili pic.png" alt="" />
+          <div class="space-y-2 text-center sm:text-left sm:font-light">
+            <div class="space-y-0.5">
+              <h2 class="text-purple-400 text-3xl font-semibold">Hi 👋</h2>
+              <p class="text-2xl font-semibold text-purple-400 flex justify-center sm:justify-start"> I'm, Aby
+                Antony Rex</p>
+              <p class="font-medium text-white">Web Developer</p>
+            </div>
+            <button
+              class="border border-purple-200 bg-purple-600  hover:border-transparent  hover:text-white active:bg-purple-700 rounded-md px-4 py-2 message">
+              Message
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mt-20 mb-20 flex items-center justify-center overflow-hidden px-4">
+        <!-- Background Animated Blob -->
+        <div
+          class="animate-pulse-fast absolute z-0 h-96 w-96 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 opacity-20 blur-3xl">
+        </div>
+
+        <!-- Card Content -->
+        <div
+          class="animate-fade-in-up relative z-10 max-w-4xl rounded-3xl border border-white/20 bg-white/10 p-10 text-center shadow-2xl ring-2 ring-purple-400/30 backdrop-blur-lg transition-all duration-500 hover:scale-105 hover:shadow-purple-600/30 desc">
+          <p class="text-lg leading-relaxed tracking-wide text-white sm:text-xl">I'm a passionate
+            <span class="font-medium text-purple-300">web developer</span> who loves building dynamic,
+            interactive websites and apps. I enjoy working with <span class="text-yellow-300">HTML</span>,
+            <span class="text-blue-400">CSS</span>, <span class="text-yellow-400">JavaScript</span>, and
+            <span class="text-blue-300">React</span>. On the server side, I use
+            <span class="text-green-400">Node.js</span>,
+            <span class="text-emerald-400">Express</span>, and
+            <span class="text-indigo-400">MongoDB</span>. I'm always excited to learn, grow, and take on
+            <span class="font-medium text-pink-400">new challenges</span>
+            with creativity and energy.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <section class="py-22 " id="skills" style="background-color: var(--dark-bg);">
+    <h1 class="text-6xl font-bold text-center py-20  mb-10" style="color: var(--bg-blue);">Skills</h1>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-15 max-w-6xl mx-auto px-4 skills-section ">
+
+      <!-- Skill Card -->
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-400 group  skill-card">
+        <img src="./src/img/html-png-removebg-preview.png" alt="HTML" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">HTML</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          HTML (HyperText Markup Language) structures and presents content on the web.
+        </p>
+      </div>
+
+      <!-- Repeat for other skills -->
+
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/css-png-removebg-preview.png" alt="CSS" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">CSS</span>
+        <p
+          class="text-sm  font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          CSS (Cascading Style Sheets) styles web pages by controlling layout and design.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/js-png-removebg-preview.png" alt="JavaScript" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">JavaScript</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          JavaScript enables interactivity and dynamic behavior in web pages.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/react-png-removebg-preview.png" alt="React" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">React</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          React is a JavaScript library for building UI components efficiently.
+        </p>
+      </div>
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/tailwind-png-removebg-preview.png" alt="Spring Boot" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">Tailwind</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          Tailwind CSS is a utility-first CSS framework for rapid UI development.
+        </p>
+      </div>
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/bootstrap-png-removebg-preview.png" alt="Spring Boot" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">Bootstrap</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          Bootstrap is a popular CSS framework for responsive web design.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/node-png-removebg-preview.png" alt="Node JS" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">Node JS</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          Node.js allows JavaScript to run on the server side for backend development.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/express-png-removebg-preview.png" alt="Express JS" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">Express JS</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          Express.js is a minimal web framework for building APIs with Node.js.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/mysql-png-removebg-preview.png" alt="MySQL" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">MySQL</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          MySQL is a relational database system used for structured data storage.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/mongodb-png-removebg-preview.png" alt="MongoDB" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">MongoDB</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          MongoDB is a NoSQL database that stores data in flexible JSON-like documents.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/java-png-removebg-preview.png" alt="Java" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">Java</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          Java is a versatile programming language for building applications.
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col items-center bg-white rounded-3xl shadow-md p-4 hover:shadow-lg transition duration-300 group skill-card">
+        <img src="./src/img/springboot-png-removebg-preview.png" alt="Spring Boot" class="w-16 h-16 mb-2">
+        <span class="text-lg font-semibold text-white">Spring Boot</span>
+        <p
+          class="text-sm font-bold text-purple-600 text-center mt-2 transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 ease-in-out">
+          Spring Boot simplifies Java backend development with built-in tools.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <section id="projects">
+    <h2 class="flex justify-center items-center mt-10  text-6xl font-bold p-10 mb-10">Projects</h2>
+    <div class="projects-container">
+
+      <!-- AbyCart -->
+      <div class="project-card">
+        <h3 class="flex justify-center items-center text-4xl p-10 project-title">AbyCart</h3>
+        <img src="./src/img/abycart.png" alt="AbyCart project screenshot" class="slideInFromLeft rounded-3xl project-image" data-project-url="https://abycart.netlify.app/">
+        <p class="flex content-center text-xl my-15">
+          A full-stack e-commerce web app built using HTML, CSS, JavaScript, Node.js, and MySQL. Supports user
+          authentication, product listings, and cart management.
+        </p>
+      </div>
+
+      <!-- Calculator App -->
+      <div class="project-card">
+        <h3 class="flex justify-center items-center text-4xl p-10 project-title">Smart Calculator</h3>
+        <img src="./src/img/calci.png" alt="Calculator project screenshot" class="slideInFromRight rounded-3xl project-image" data-project-url="https://abycalculator.netlify.app/">
+        <p class="flex content-center text-xl my-15">
+          A simple JavaScript-based calculator that supports basic arithmetic operations. Designed with a clean UI and
+          responsive layout.
+        </p>
+      </div>
+
+      <!-- Portfolio Website -->
+      <div class="project-card">
+        <h3 class="flex justify-center items-center text-4xl p-10 project-title">Personal Portfolio</h3>
+        <img src="./src/img/portfolio.png" alt="Portfolio project screenshot" class="slideInFromLeft rounded-3xl project-image" data-project-url="https://aby-portfolio.netlify.app/">
+        <p class="flex content-center text-xl my-15">
+          A responsive portfolio website showcasing my skills, projects, and background. Built with HTML, CSS, and a
+          mobile-first design.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <footer>
+
+    <h1 class="flex justify-center items-center mt-10  text-6xl font-bold p-5 mb-8 " id="contact">Contact Me</h1>
+    <div
+      class="grid grid-cols-2 justify-center content-center text-3xl sm:grid-cols-4 md:grid-cols-4 gap-6 max-w-6xl mx-auto pb-8 footer-section ">
+      <div>
+        <a href="https://github.com/abyantonyrex/Projects" class="social" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+          <span>Github</span>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="social">
+          <i class="fab fa-whatsapp"></i>
+          <span>Whatsapp</span>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="social">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="social">
+          <i class="fab fa-facebook"></i>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <script>
+    function showSideBar() {
+      const sidebar = document.querySelector('#sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideSideBar() {
+      const sidebar = document.querySelector('#sidebar')
+      sidebar.style.display = 'none'
+    }
+
+    document.querySelector(".resume-btn").addEventListener("click", function () {
+      const link = document.createElement("a");
+      link.href = "https://drive.google.com/uc?export=download&id=1UTNjsSezF7yvTAKSDlYNKmz9py-JIW5M";
+      link.download = "aby_resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const projectImages = document.querySelectorAll('.project-image');
+  
+  projectImages.forEach(function(image) {
+    image.addEventListener('click', function() {
+      const projectUrl = this.getAttribute('data-project-url');
+      if (projectUrl) {
+        window.open(projectUrl, '_blank');
+      } else {
+        console.error('Project URL not found');
+      }
+    });
+    
+    // Make it clear this is clickable
+    image.style.cursor = 'pointer';
+  });
+});
+
+  </script>
+</body>
+
+</html>
