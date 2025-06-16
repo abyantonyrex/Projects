@@ -4,8 +4,8 @@
   "description": "new node js project",
   "main": "Express.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon Express.js"
+    "start": "node Express.js",
+    "dev": "nodemon Express.js"
   },
   "author": "Aby Rex",
   "license": "ISC",
