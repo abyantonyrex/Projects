@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../Layout/Header.ejs') %>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body class="home-body">
+    <%- include('../Layout/Navbar.ejs') %>
+
+    <% if (productRes) { %>
+    <main class="main">
+        <h1>Welcome to our app</h1>
+        <h2>Here are the products</h2>
+        <div class="container">
+                <% for(let i= 0; i < userProduct.length; i++) { %>
+                    <div class="products-card">
+                        <img class="product-image" src="<%=userProduct[i].imageUrl %>" alt="" width="300px" height="215px">
+                        <h4>Name: <b><%=userProduct[i].title %></b></h4>
+                        <p>Desc: <b><%=userProduct[i].desc %></b></p>
+                        <p>Price: <b><%=userProduct[i].price %></b></p>
+                        <p>Delivery: <b><%=userProduct[i].delivery %></b></p>
+                        <%- include ('../Ejs-Pages/BuyNow.ejs' , {product:userProduct[i]}) %>
+                    </div>
+                    <% } %>
+                </div>
+            </main>
+            <%} else {%>
+                <center>
+                    <h1>No products found</h1>
+                </center>
+            <%}%>
+</body>
+</html>

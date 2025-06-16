@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../Layout/Header.ejs') %>
+        <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body class="Admin-body">
+    <%- include('../Layout/Navbar.ejs') %>
+
+        <% if (productRes) { %>
+            <main class="main">
+                <h2>Welcome Admin</h2>
+                <h3>Here are the products</h3>
+                <div class="container">
+                    <% for(let i=0; i < userProduct.length; i++) { %>
+                        <div class="products-card">
+                            <img class="product-image" src="<%=userProduct[i].imageUrl %>" alt="product image"
+                                width="300px" height="215px">
+                            <h4>Name: <b>
+                                    <%=userProduct[i].title %>
+                                </b></h4>
+                            <p>Desc: <b>
+                                    <%=userProduct[i].desc %>
+                                </b></p>
+                            <p>Price: <b>
+                                    <%=userProduct[i].price %>
+                                </b></p>
+                            <p>Delivery: <b>
+                                    <%=userProduct[i].delivery %>
+                                </b></p>
+                            <div class="button-group">
+                                <button class="edit-btn"><a href="/edit-product/<%= userProduct[i].id %>?edit=true">Edit
+                                        Product</a></button>
+                                <form action="/delete-product" method="post">
+                                    <button class="delete-btn" type="submit">Delete Product</button>
+                                    <input type="hidden" name="productId" value="<%= userProduct[i].id %>">
+                                </form>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+            </main>
+            <%} else {%>
+                <center>
+                    <h1>No products found</h1>
+                </center>
+                <%}%>
+</body>
+
+</html>

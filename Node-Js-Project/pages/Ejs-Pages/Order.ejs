@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../Layout/Header.ejs') %>
+        <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body class="order-bg">
+    <%- include('../Layout/Navbar.ejs') %>
+
+       <main class="main-cart">
+    <h1>Welcome to Order Page</h1>
+    <!-- <h4>Your ordered products</h4> -->
+    <div class="cart-container">
+        <% if (products.length > 0) { %>
+            <div class="products-order">
+                <% products.forEach(item => { %>
+                    <div class="order-item">
+                        <img src="<%= item.productData.imageUrl %>" alt="product" class="order-item-image">
+                        <div class="order-item-details">
+                          <h3><%= item.productData.title %></h3>
+                          <p>Price: <b><%= item.productData.price %></b></p>
+                          <p>Quantity: <b><%= item.qty %></b></p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div> 
+                 <div class="total-price">
+                    <h2>Total Price: ₹<%= totalPrice %></h2>
+                 </div>
+        <% } else { %>
+            <div style="margin-top: -25%;">
+                <h1>Your cart is empty.</h1>
+            </div>
+        <% } %>
+    </div>
+</main>
+
+
+</body>
+
+</html>

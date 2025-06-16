@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../Layout/Header.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body class="add-product-bd">
+    <%- include('../Layout/Navbar.ejs') %>
+
+
+    <main class="main">
+        <% if (editing){%>
+        <h1>Welcome to edit product</h1>
+        <% } else {%>
+        <h1>welcome to add product</h1>
+        <% }%>
+        <form class="glass-form" action="<% if(editing) { %> /edit-product <% } else { %> /message <% } %>" method="POST">
+            <input type="url" placeholder="Enter a product image url" name="imageUrl"  value="<% if (editing) {%> <%=product.imageUrl%> <% }%>"/>
+            <input type="text" placeholder="Enter a product name" name="title"  value="<% if (editing) {%> <%=product.title%> <% }%>" />
+            <input type="text" placeholder="Enter a product Description" name="desc"  value="<% if (editing) {%> <%=product.desc%> <% }%>" />
+            <input type="text" placeholder="Enter a product price" name="price"  value="<% if (editing) {%> <%=product.price%> <% }%>" />
+            <input type="text" placeholder="Enter a product delivery cost" name="delivery"  value="<% if (editing) {%> <%=product.delivery%> <% }%>" />
+            <% if (editing) { %>
+        <input type="hidden" name="productId" value="<%= product.id %>">
+            <% } %>
+            <button type="submit"><%= editing ? "Edit" : "Add" %></button>
+            <!-- <button type="submit">Add</button> -->
+        </form>
+    </main>
+
+</body>
+
+</html>

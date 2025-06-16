@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{Pagetitle}
+    link(rel="stylesheet", href="/css/home.css")
+  body 
+    nav 
+        ul 
+            li 
+                 a(href="/") Shop
+            li 
+                 a.active(href="/add-product") Add Product
+    main.main 
+        h2 Thanks for using our app
+        h3 Here are the products
+        .products-container
+            if userProduct.length > 0
+                each pro in userProduct 
+                  .products-card
+                    img(src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt="img not found")
+                    h4 Name: #{pro.title}
+                    p Description: Sample description
+                    p 
+                      b Price: $100
+                    p 
+                      b Delivery: 3-5 days
+                    button Buy Now
+            else 
+              h1 No products found        

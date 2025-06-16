@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../Layout/Header.ejs') %>
+        <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body class="cart-bg">
+    <%- include('../Layout/Navbar.ejs') %>
+
+       <main class="main-cart">
+    <h1>Welcome to your cart</h1>
+    <div class="cart-container">
+        <% if (products.length > 0) { %>
+            <div class="products-cart">
+                <% products.forEach(item => { %>
+                    <div class="cart-item">
+                        <img src="<%= item.productData.imageUrl %>" alt="product" class="cart-item-image">
+                        <div class="cart-item-details">
+                          <h3><%= item.productData.title %></h3>
+                          <p>Price: <b><%= item.productData.price %></b></p>
+                          <p>Quantity: <b><%= item.qty %></b></p>
+                          <form action="/Cart-Delete" method="post">
+                                    <button class="delete-btn" type="submit">Delete Product</button>
+                                    <input type="hidden" name="productId" value="<%= item.productData.id %>">
+                                </form>
+                        </div>
+                    </div>
+                <% }) %>
+            </div> 
+                 <div class="order-btn-container">
+                    <a href="/order"><button type="button" class="order-btn">Order</button></a>
+                 </div>
+        <% } else { %>
+            <div style="margin-top: -25%;">
+                <h1>Your cart is empty.</h1>
+            </div>
+        <% } %>
+    </div>
+</main>
+
+
+</body>
+
+</html>

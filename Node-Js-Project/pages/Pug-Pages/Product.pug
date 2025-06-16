@@ -1,0 +1,8 @@
+extends Layout/Navbar.pug
+block body-nav
+        .container     
+            main.main 
+                h1 welcome to add product
+                form(action="/message", method="POST")
+                    input(type="text", placeholder="enter a text", name="title")
+                    button(type="submit") submit  

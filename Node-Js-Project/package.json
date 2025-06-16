@@ -1,0 +1,21 @@
+{
+  "name": "new-node-js",
+  "version": "1.0.0",
+  "description": "new node js project",
+  "main": "Express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon Express.js"
+  },
+  "author": "Aby Rex",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1",
+    "nodemon": "^3.1.10",
+    "pug": "^3.0.3"
+    
+  }
+}
