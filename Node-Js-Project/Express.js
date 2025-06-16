@@ -3,6 +3,7 @@ let express = require('express');
 let bodyParser = require('body-parser');
 let app = express();
 app.use(bodyParser.urlencoded())
+const PORT = process.env.PORT || 3000;
 
 
 app.set('view engine', 'ejs');
@@ -24,10 +25,9 @@ app.use(adminExport)
 app.use(errorExport)
 
 
-server.listen(3000,()=>{
-    console.log("Server is running on port 3000");
-    console.log('http://localhost:3000')
-})
+server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
 // app.set('view engine' , 'pug')
 
