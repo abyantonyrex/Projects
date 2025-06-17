@@ -1,7 +1,13 @@
-import React from 'react'
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import abyimg from '/src/img/aby-ghibili-pic.png'
 const AboutSection = () => {
+  useEffect(() => {
+      AOS.init({ duration: 400, once: false }); 
+    }, []);
   return (
+    
     <section>
       <div>
         <div id="about-me" className="flex justify-center items-center mt-10 mb-10 text-6xl">
@@ -14,9 +20,10 @@ const AboutSection = () => {
             className="flex items-center gap-4 p-10 border border-gray-200 rounded-lg shadow-xl hover:shadow-2xl hover:cursor-pointer"
           >
             <img 
-              className="h-56 w-56 rounded-full aby-img" 
-              src="./src/img/aby-ghibili-pic.png" 
-              alt="Aby Antony Rex" 
+              className="h-56 w-56 rounded-full aby-img animate-float" 
+              src={abyimg} 
+              alt="Aby Antony Rex"
+              data-aos="fade-up"
             />
             <div className="space-y-2 text-center sm:text-left sm:font-light">
               <div className="space-y-0.5">
