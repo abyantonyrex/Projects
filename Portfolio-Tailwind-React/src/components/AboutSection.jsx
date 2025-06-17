@@ -15,7 +15,7 @@ const AboutSection = () => {
           >
             <img 
               className="h-56 w-56 rounded-full aby-img" 
-              src="/src/img/aby-ghibili-pic.png" 
+              src="./src/img/aby-ghibili-pic.png" 
               alt="Aby Antony Rex" 
             />
             <div className="space-y-2 text-center sm:text-left sm:font-light">
