@@ -2,6 +2,18 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import s1 from '/src/img/html-png-removebg-preview.png';
+import s2 from '/src/img/css-png-removebg-preview.png';
+import s3 from '/src/img/js-png-removebg-preview.png';
+import s4 from '/src/img/react-png-removebg-preview.png';
+import s5 from '/src/img/tailwind-png-removebg-preview.png';
+import s6 from '/src/img/bootstrap-png-removebg-preview.png';
+import s7 from '/src/img/node-png-removebg-preview.png';
+import s8 from '/src/img/express-png-removebg-preview.png';
+import s9 from '/src/img/mysql-png-removebg-preview.png';
+import s10 from '/src/img/mongodb-png-removebg-preview.png';
+import s11 from '/src/img/java-png-removebg-preview.png';
+import s12 from '/src/img/springboot-png-removebg-preview.png';
 
 const SkillsSection = () => {
   useEffect(() => {
@@ -10,62 +22,62 @@ const SkillsSection = () => {
   const skills = [
     {
       name: 'HTML',
-      image: '/src/img/html-png-removebg-preview.png',
+      image: s1,
       description: 'HTML (HyperText Markup Language) structures and presents content on the web.'
     },
     {
       name: 'CSS',
-      image: '/src/img/css-png-removebg-preview.png',
+      image: s2,
       description: 'CSS (Cascading Style Sheets) styles web pages by controlling layout and design.'
     },
     {
       name: 'JavaScript',
-      image: '/src/img/js-png-removebg-preview.png',
+      image: s3,
       description: 'JavaScript enables interactivity and dynamic behavior in web pages.'
     },
     {
       name: 'React',
-      image: '/src/img/react-png-removebg-preview.png',
+      image: s4,
       description: 'React is a JavaScript library for building UI components efficiently.'
     },
     {
       name: 'Tailwind',
-      image: '/src/img/tailwind-png-removebg-preview.png',
+      image: s5,
       description: 'Tailwind CSS is a utility-first CSS framework for rapid UI development.'
     },
     {
       name: 'Bootstrap',
-      image: '/src/img/bootstrap-png-removebg-preview.png',
+      image: s6,
       description: 'Bootstrap is a popular CSS framework for responsive web design.'
     },
     {
       name: 'Node JS',
-      image: '/src/img/node-png-removebg-preview.png',
+      image: s7,
       description: 'Node.js allows JavaScript to run on the server side for backend development.'
     },
     {
       name: 'Express JS',
-      image: '/src/img/express-png-removebg-preview.png',
+      image: s8,
       description: 'Express.js is a minimal web framework for building APIs with Node.js.'
     },
     {
       name: 'MySQL',
-      image: '/src/img/mysql-png-removebg-preview.png',
+      image: s9,
       description: 'MySQL is a relational database system used for structured data storage.'
     },
     {
       name: 'MongoDB',
-      image: '/src/img/mongodb-png-removebg-preview.png',
+      image: s10,
       description: 'MongoDB is a NoSQL database that stores data in flexible JSON-like documents.'
     },
     {
       name: 'Java',
-      image: '/src/img/java-png-removebg-preview.png',
+      image: s11,
       description: 'Java is a versatile programming language for building applications.'
     },
     {
       name: 'Spring Boot',
-      image: '/src/img/springboot-png-removebg-preview.png',
+      image: s12,
       description: 'Spring Boot simplifies Java backend development with built-in tools.'
     }
   ]

@@ -33,19 +33,19 @@ const Footer = () => {
       url: 'https://github.com/abyantonyrex/Projects',
     },
     {
-      name: 'Whatsapp',
-      icon: 'fab fa-whatsapp',
-      url: '#',
+      name: 'LinkedIn',
+      icon: 'fab fa-linkedin',
+      url: 'https://www.linkedin.com/in/aby-antony-rex',
     },
     {
-      name: 'Instagram',
-      icon: 'fab fa-instagram',
-      url: '#',
+      name: 'Email',
+      icon: 'fas fa-envelope',
+      url: 'mailto:abyrex2002@example.com',
     },
     {
-      name: 'Facebook',
-      icon: 'fab fa-facebook',
-      url: '#',
+      name: 'Naukri',
+      icon: 'fas fa-briefcase',
+      url: 'https://www.naukri.com/mnjuser/profile',
     },
   ];
 

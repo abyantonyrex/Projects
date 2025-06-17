@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import p1 from "/src/img/abyproject.gif";
+import p2 from "/src/img/abycart.png";
+import p3 from "/src/img/calci.png";
+import p4 from "/src/img/portfolio.png";
+
 
 
 const ProjectsSection = () => {
@@ -10,7 +15,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Product Mangement System",
-      image: "/src/img/abyproject.gif",
+      image: p1,
       url: "https://inventorynode.netlify.app/",
       description:
         "A backend-driven product management app built with Node.js, Express, MySQL, and EJS. Includes secure authentication, CRUD operations for products, and real-time inventory updates.",
@@ -18,7 +23,7 @@ const ProjectsSection = () => {
     },
     {
       title: "AbyCart",
-      image: "/src/img/abycart.png",
+      image: p2,
       url: "https://abycart.netlify.app/",
       description:
         "A full-stack e-commerce web app built using HTML, CSS, JavaScript, Node.js, and MySQL. Supports user authentication, product listings, and cart management.",
@@ -27,7 +32,7 @@ const ProjectsSection = () => {
 
     {
       title: "Smart Calculator",
-      image: "/src/img/calci.png",
+      image: p3,
       url: "https://abycalculator.netlify.app/",
       description:
         "A simple JavaScript-based calculator that supports basic arithmetic operations. Designed with a clean UI and responsive layout.",
@@ -35,7 +40,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Personal Portfolio",
-      image: "/src/img/portfolio.png",
+      image: p4,
       url: "https://aby-portfolio.netlify.app/",
       description:
         "A responsive portfolio website showcasing my skills, projects, and background. Built with HTML, CSS, and a mobile-first design.",
