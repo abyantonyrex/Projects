@@ -1,0 +1,36 @@
+import React, { useState } from 'react'
+import Navigation from './components/Navigation'
+import Sidebar from './components/Sidebar'
+import AboutSection from './components/AboutSection'
+import SkillsSection from './components/SkillsSection'
+import ProjectsSection from './components/ProjectsSection'
+import Footer from './components/Footer'
+
+function App() {
+  const [sidebarVisible, setSidebarVisible] = useState(false)
+
+  const showSidebar = () => setSidebarVisible(true)
+  const hideSidebar = () => setSidebarVisible(false)
+
+  const downloadCV = () => {
+    const link = document.createElement("a")
+    link.href = "https://drive.google.com/uc?export=download&id=1UTNjsSezF7yvTAKSDlYNKmz9py-JIW5M"
+    link.download = "aby_resume.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
+  return (
+    <div className="p-0 m-0">
+      <Sidebar visible={sidebarVisible} onHide={hideSidebar} />
+      <Navigation onShowSidebar={showSidebar} onDownloadCV={downloadCV} />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <Footer />
+    </div>
+  )
+}
+
+export default App
