@@ -1,51 +1,135 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_9x4vwzw',
+        'template_92kn6sk',
+        form.current,
+        'PerDUjF4fmeA5yFPU'
+      )
+      .then(
+        (result) => {
+          alert('Message sent successfully!');
+          form.current.reset();
+        },
+        (error) => {
+          alert('Failed to send message. Try again.');
+          console.error(error.text);
+        }
+      );
+  };
+
   const socialLinks = [
     {
       name: 'Github',
       icon: 'fab fa-github',
-      url: 'https://github.com/abyantonyrex/Projects'
+      url: 'https://github.com/abyantonyrex/Projects',
     },
     {
       name: 'Whatsapp',
       icon: 'fab fa-whatsapp',
-      url: '#'
+      url: '#',
     },
     {
       name: 'Instagram',
       icon: 'fab fa-instagram',
-      url: '#'
+      url: '#',
     },
     {
       name: 'Facebook',
       icon: 'fab fa-facebook',
-      url: '#'
-    }
-  ]
+      url: '#',
+    },
+  ];
 
   return (
-    <footer>
-      <h1 className="flex justify-center items-center mt-10 text-6xl font-bold p-5 mb-8" id="contact">
+    <>
+      <h1 className="flex justify-center items-center mt-10 text-6xl  font-bold p-5 mb-4" id="contact">
         Contact Me
       </h1>
-      <div className="grid grid-cols-2 justify-center content-center text-3xl sm:grid-cols-4 md:grid-cols-4 gap-6 max-w-6xl mx-auto pb-8 footer-section">
-        {socialLinks.map((link, index) => (
-          <div key={index}>
-            <a 
-              href={link.url} 
-              className="social" 
-              target={link.url !== '#' ? '_blank' : '_self'} 
-              rel={link.url !== '#' ? 'noopener noreferrer' : ''}
-            >
-              <i className={link.icon}></i>
-              <span>{link.name}</span>
-            </a>
-          </div>
-        ))}
-      </div>
-    </footer>
-  )
-}
 
-export default Footer
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="max-w-3xl mx-auto p-6 bg-blue-100 rounded-xl shadow-md mb-10"
+      >
+        <div className="mb-4">
+          <label htmlFor="name" className="block text-lg text-black font-semibold mb-2">
+            Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            placeholder="Your name"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="email" className="block text-lg text-black font-semibold mb-2">
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Your email"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="message" className="block text-lg text-black font-semibold mb-2">
+            Message
+          </label>
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            required
+            placeholder="Your message"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+        >
+          Submit
+        </button>
+      </form>
+
+      <footer> 
+        <div className="grid grid-cols-2 justify-center content-center text-3xl sm:grid-cols-4 gap-6 max-w-6xl mx-auto p-8">
+          {socialLinks.map((link, index) => (
+            <div key={index}>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social"
+              >
+                <i className={`${link.icon} pr-3`}></i>
+                {link.name}
+              </a>
+            </div>
+          ))}
+        </div>
+          <p className='text-center p-5'>Copyright &copy; {new Date().getFullYear()}</p>
+      </footer>
+    </>
+  );
+};
+
+export default Footer;

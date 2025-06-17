@@ -15,7 +15,7 @@ const AboutSection = () => {
           >
             <img 
               className="h-56 w-56 rounded-full aby-img" 
-              src="/Portfolio-Tailwind/src/img/aby ghibili pic.png" 
+              src="/src/img/aby-ghibili-pic.png" 
               alt="Aby Antony Rex" 
             />
             <div className="space-y-2 text-center sm:text-left sm:font-light">
@@ -24,11 +24,13 @@ const AboutSection = () => {
                 <p className="text-2xl font-semibold text-purple-400 flex justify-center sm:justify-start">
                   I'm, Aby Antony Rex
                 </p>
-                <p className="font-medium text-white">Web Developer</p>
+                <p className="font-medium text-white">Full Stack Web Developer</p>
               </div>
-              <button className="border border-purple-200 bg-purple-600 hover:border-transparent hover:text-white active:bg-purple-700 rounded-md px-4 py-2 message">
-                Message
+              <a href="#contact">
+                <button className="border border-purple-200 bg-purple-600 hover:border-transparent hover:text-white active:bg-purple-700 rounded-md px-4 py-2 m-2 message">
+                Get in Touch
               </button>
+              </a>
             </div>
           </div>
         </div>
