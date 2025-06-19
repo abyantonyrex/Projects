@@ -1,5 +1,6 @@
 let path = require("path");
 let fs = require("fs");
+const Cart = require("../Model/Cart");
 
 const pt = path.join(
   path.dirname(require.main.filename),
@@ -24,11 +25,11 @@ let readTheData = (cb) => {
 module.exports = class Mproduct {
   constructor({ title, desc, price, delivery, imageUrl, id }) {
     this.id = id || Math.random().toString();
-    this.imageUrl = imageUrl;
-    this.title = title;
-    this.desc = desc;
-    this.price = price;
-    this.delivery = delivery;
+    this.imageUrl = imageUrl.trim();
+    this.title = title.trim();
+    this.desc = desc.trim();
+    this.price = price.trim();
+    this.delivery = delivery.trim();
   }
 
   save() {
@@ -56,17 +57,20 @@ module.exports = class Mproduct {
       cb(prodDetails);
     });
   }
-  
-  static deleteById(id){
-    readTheData(products =>{
-      const updatedProduct = products.filter(p=> p.id !== id)
-      fs.writeFile(pt,JSON.stringify(updatedProduct), err=> {
-        cart.deleteProduct(id,products.price)
-      }
-    )
-  })
-}
-static fetchAll(cb) {
-  readTheData(cb);
-}
+
+  static deleteById(id) {
+    readTheData((products) => {
+      const product = products.find((p) => p.id === id);
+      const updatedProducts = products.filter((p) => p.id !== id);
+
+      fs.writeFile(pt, JSON.stringify(updatedProducts, null, 2), (err) => {
+        if (!err && product) {
+          Cart.deleteProduct(id, product.price); // Make sure product.price is passed
+        }
+      });
+    });
+  }
+  static fetchAll(cb) {
+    readTheData(cb);
+  }
 };

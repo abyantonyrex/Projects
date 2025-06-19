@@ -49,6 +49,10 @@ exports.shop_cart_post = (req, resp, next) => {
   let prodId = req.body.productId;
 
   product.findById(prodId, (product) => {
+     if (!product) {
+      console.log("Product not found:", prodId);
+      return resp.status(404).send("Product not found");
+    }
     Cart.addProduct(prodId, product.price);
     // console.log("Product added to cart:", product);
   });
