@@ -21,7 +21,7 @@
                         <p>Price: <b><%=userProduct[i].price %></b></p>
                         <p>Delivery: <b><%=userProduct[i].delivery %></b></p>
                               
-                        <form action="/product/description/<%= userProduct[i].id %>" method="get">
+                        <form action="/product/description/<%= userProduct[i]._id %>" method="get">
                                 <button class="desc-btn" type="submit">ⓘ Desc</button>
                         </form>
                     </div>

@@ -6,23 +6,42 @@ app.use(bodyParser.urlencoded())
 const PORT = process.env.PORT || 3000;
 
 
+require('dotenv').config();
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('MongoDB connected!'))
+.catch((err) => console.log('MongoDB connection error:', err));
+
+
+
 app.set('view engine', 'ejs');
 app.set('views', 'pages');
 
 
-let shopExport = require('./routers/Shop')
-let adminExport = require('./routers/Admin')
-let errorExport = require('./routers/ErrorPage')
+// let shopExport = require('./routers/Shop')
+// let adminExport = require('./routers/Admin')
+// let errorExport = require('./routers/ErrorPage')
 
 let path = require('path')
 let global = require('./util/pathdef')
 app.use(express.static(path.join(global , '/public')))
 let server = http.createServer(app);
 
+const productMongoRoutes = require('./routers/productMongo');
+app.use(productMongoRoutes);
 
-app.use(shopExport)
-app.use(adminExport)
-app.use(errorExport)
+const adminMongoRoutes = require('./routers/adminMongo');
+app.use(adminMongoRoutes);
+
+// app.use(shopExport)
+// app.use(adminExport)
+// app.use(errorExport)
+
+
 
 
 server.listen(PORT, () => {

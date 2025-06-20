@@ -1,21 +1,21 @@
-let express = require("express");
-let router = express.Router();
-let Path = require("path");
-let global = require("../util/pathdef");
+// let express = require("express");
+// let router = express.Router();
+// let Path = require("path");
+// let global = require("../util/pathdef");
 
 
-let AdminController = require('../controller/AdminController')
+// let AdminController = require('../controller/AdminController')
 
-router.post("/message" , AdminController.addProductPost)
-router.get("/admin-product" , AdminController.admin_Products );
-router.get("/add-product" , AdminController.addProduct_get );
-router.get("/edit-product/:productId" , AdminController.editProduct_get );
-router.post("/edit-product" , AdminController.editProduct_post)
-router.post("/delete-product" , AdminController.deleteProduct)
-router.post("/Cart-Delete" , AdminController.cartDeleteProduct)
+// router.post("/message" , AdminController.addProductPost)
+// router.get("/admin-product" , AdminController.admin_Products );
+// router.get("/add-product" , AdminController.addProduct_get );
+// router.get("/edit-product/:productId" , AdminController.editProduct_get );
+// router.post("/edit-product" , AdminController.editProduct_post)
+// router.post("/delete-product" , AdminController.deleteProduct)
+// router.post("/Cart-Delete" , AdminController.cartDeleteProduct)
 
 
-module.exports = router
+// module.exports = router
 
 
 
