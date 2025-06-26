@@ -42,6 +42,9 @@ export default {
         fadeInUp: 'fadeInUp 1.2s ease-out both',
         'pulse-fast': 'pulse 3s ease-in-out infinite',
       },
+      screens: {
+        xs: '400px', 
+      },
     },
   },
   plugins: [],

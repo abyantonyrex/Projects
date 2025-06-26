@@ -8,7 +8,7 @@ const AboutSection = () => {
     }, []);
   return (
     
-    <section>
+    <section className="border-b-2 border-gray-500 mb-10">
       <div>
         <div id="about-me" className="flex justify-center items-center mt-10 mb-10 text-6xl">
           <h1>About Me</h1>

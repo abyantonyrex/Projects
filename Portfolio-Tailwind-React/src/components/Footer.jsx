@@ -51,14 +51,14 @@ const Footer = () => {
 
   return (
     <>
-      <h1 className="flex justify-center items-center mt-10 text-6xl  font-bold p-5 mb-4" id="contact">
+      <h1 className="flex justify-center items-center mt-20 text-6xl  font-bold p-5 mb-4" id="contact">
         Contact Me
       </h1>
 
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="max-w-3xl mx-auto p-6 bg-blue-100 rounded-xl shadow-md mb-10"
+        className="max-w-2xl mx-auto p-6 bg-blue-100 rounded-xl shadow-md mb-20 xs:scale-75 sm:scale-100"
       >
         <div className="mb-4">
           <label htmlFor="name" className="block text-lg text-black font-semibold mb-2">
@@ -102,12 +102,14 @@ const Footer = () => {
           ></textarea>
         </div>
 
-        <button
+        <div className="flex justify-center p-5">
+          <button
           type="submit"
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+          className="bg-blue-600 text-white px-10 py-4 rounded-lg hover:bg-blue-700 "
         >
           Submit
         </button>
+        </div>
       </form>
 
       <footer> 
