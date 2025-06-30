@@ -1,42 +1,60 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import abyimg from '/src/img/aby-ghibili-pic.png'
+import abyimg from "/src/img/aby-ghibili-pic.png";
+import TypewriterLoop from "./TypewriterText";
+
 const AboutSection = () => {
   useEffect(() => {
-      AOS.init({ duration: 400, once: false }); 
-    }, []);
+    AOS.init({ duration: 400, once: false });
+  }, []);
   return (
-    
     <section className="border-b-2 border-gray-500 mb-10">
       <div>
-        <div id="about-me" className="flex justify-center items-center mt-10 mb-10 text-6xl">
+        <div
+          id="about-me"
+          className="flex justify-center items-center mt-10 mb-10 text-6xl "
+        >
           <h1>About Me</h1>
         </div>
 
-        <div className="flex flex-col gap-2 p-8 sm:p-8 sm:items-center place-content-start">
+        <div className="flex flex-col gap-2 p-8 sm:p-8 sm:items-center place-content-start w-auto sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto">
           <div
             id="profile-card"
             className="flex items-center gap-4 p-10 border border-gray-200 rounded-lg shadow-xl hover:shadow-2xl hover:cursor-pointer"
           >
-            <img 
-              className="h-56 w-56 rounded-full aby-img animate-float" 
-              src={abyimg} 
+            <img
+              className="h-56 w-56 rounded-full aby-img animate-float"
+              src={abyimg}
               alt="Aby Antony Rex"
               data-aos="fade-up"
             />
             <div className="space-y-2 text-center sm:text-left sm:font-light">
               <div className="space-y-0.5">
-                <h2 className="text-purple-400 text-3xl font-semibold">Hi 👋</h2>
+                <h2 className="text-purple-400 text-3xl font-semibold">
+                  Hi 👋
+                </h2>
                 <p className="text-2xl font-semibold text-purple-400 flex justify-center sm:justify-start">
                   I'm, Aby Antony Rex
                 </p>
-                <p className="font-medium text-white">Full Stack Web Developer</p>
+                <TypewriterLoop
+                  texts={[
+                    "Full Stack Developer",
+                    "Frontend Developer",
+                    "UI/UX Enthusiast",
+                  ]}
+                  speed={100}
+                  pause={1500}
+                  className="text-xl sm:text-2xl font-semibold"
+                />
+                {/* <p className="font-medium text-white">
+                  Full Stack Web Developer
+                </p> */}
               </div>
               <a href="#contact">
                 <button className="border border-purple-200 bg-purple-600 hover:border-transparent hover:text-white active:bg-purple-700 rounded-md px-4 py-2 m-2 message">
-                Get in Touch
-              </button>
+                  Get in Touch
+                </button>
               </a>
             </div>
           </div>
@@ -49,23 +67,25 @@ const AboutSection = () => {
           {/* Card Content */}
           <div className="animate-fade-in-up relative z-10 max-w-4xl rounded-3xl border border-white/20 bg-white/10 p-10 text-center shadow-2xl ring-2 ring-purple-400/30 backdrop-blur-lg transition-all duration-500 hover:scale-105 hover:shadow-purple-600/30 desc">
             <p className="text-lg leading-relaxed tracking-wide text-white sm:text-xl">
-              I'm a passionate{' '}
-              <span className="font-medium text-purple-300">web developer</span> who loves building dynamic,
-              interactive websites and apps. I enjoy working with{' '}
-              <span className="text-yellow-300">HTML</span>,{' '}
-              <span className="text-blue-400">CSS</span>,{' '}
-              <span className="text-yellow-400">JavaScript</span>, and{' '}
-              <span className="text-blue-300">React</span>. On the server side, I use{' '}
-              <span className="text-green-400">Node.js</span>,{' '}
-              <span className="text-emerald-400">Express</span>, and{' '}
-              <span className="text-indigo-400">MongoDB</span>. I'm always excited to learn, grow, and take on{' '}
-              <span className="font-medium text-pink-400">new challenges</span> with creativity and energy.
+              I'm a passionate{" "}
+              <span className="font-medium text-purple-300">web developer</span>{" "}
+              who loves building dynamic, interactive websites and apps. I enjoy
+              working with <span className="text-yellow-300">HTML</span>,{" "}
+              <span className="text-blue-400">CSS</span>,{" "}
+              <span className="text-yellow-400">JavaScript</span>, and{" "}
+              <span className="text-blue-300">React</span>. On the server side,
+              I use <span className="text-green-400">Node.js</span>,{" "}
+              <span className="text-emerald-400">Express</span>, and{" "}
+              <span className="text-indigo-400">MongoDB</span>. I'm always
+              excited to learn, grow, and take on{" "}
+              <span className="font-medium text-pink-400">new challenges</span>{" "}
+              with creativity and energy.
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;

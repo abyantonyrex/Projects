@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,11 +19,15 @@
   --glass-blur: blur(10px);
 }
 
+
+
+
 body {
   background-color: var(--dark-bg);
   color: var(--font-color);
   margin: 0;
   padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #main-bars {
@@ -32,6 +37,9 @@ body {
   background-color: var(--dark-bg);
   box-shadow: 0 1px 7px rgba(255, 255, 255, 0.6);
   padding: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 #sidebar {
@@ -350,7 +358,6 @@ footer {
   #logo {
     scale: 0.8;
     position: relative;
-    left: 50px;
   }
   #menu-bar {
     scale: 0.6;

@@ -52,14 +52,14 @@ const ProjectsSection = () => {
 
   return (
     <div className="border-b-2 border-gray-500 mb-10 py-20 ">
-    <section id="projects" className="">
+    <section id="projects" className=" ">
       <h2 className="text-6xl font-bold text-center mb-16">Projects</h2>
 
-      <div className="grid grid-cols-1  md:grid-cols-2 gap-12 px-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1  md:grid-cols-2 gap-12 px-6 max-w-7xl mx-auto ">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="project-card bg-gray-900 rounded-3xl transition duration-300 hover:shadow-2xl"
+            className="project-card bg-gray-900 rounded-3xl transition duration-300 hover:shadow-2xl shadow-cyan-glow"
             data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
           >
             <h3 className="text-4xl text-center p-6 text-white font-semibold ">

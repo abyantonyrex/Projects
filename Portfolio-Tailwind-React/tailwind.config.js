@@ -8,6 +8,8 @@ export default {
     extend: {
       boxShadow: {
         'left-soft': '-10px 0 10px rgba(0, 0, 0, 0.1)',
+        'cyan-glow': '0px 0px 8px 2px rgba(255, 255, 255, 0.2)',
+
       },
       keyframes: {
         slideInFromLeft: {
@@ -41,6 +43,7 @@ export default {
         float: 'float 4s ease-in-out infinite',
         fadeInUp: 'fadeInUp 1.2s ease-out both',
         'pulse-fast': 'pulse 3s ease-in-out infinite',
+         blink: 'blink 1s step-start infinite',
       },
       screens: {
         xs: '400px', 

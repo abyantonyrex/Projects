@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from './CvBtn';
 
+  
+
 const Navigation = ({ onShowSidebar, onDownloadCV }) => {
   return (
     <nav
@@ -9,7 +11,7 @@ const Navigation = ({ onShowSidebar, onDownloadCV }) => {
     >
       <ul className="flex flex-row items-center justify-end text-2xl font-bold space-x-4">
         
-        <li id="logo" className="mr-auto px-10 text-3xl md:text-2xl">
+        <li id="logo" className="mr-auto px-10 text-3xl md:text-2xl sm:text-xl">
           <a href="#">Portfolio</a>
         </li>
 
