@@ -29,7 +29,9 @@ body {
   padding: 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+a:target {
+  background-color: #7c3aed; /* violet-600 */
+}
 #main-bars {
   position: sticky;
   top: 0;
@@ -78,32 +80,10 @@ body {
 }
 
 #CV-button {
-  background-color: var(--font-nav);
-  color: var(--font-color);
-  padding: 5px 10px;
-  box-shadow: 0 1px 12px var(--font-color);
-  border-radius: 10px;
   cursor: pointer;
   font-size: 1.2rem;
 }
 
-#CV-button:hover::after {
-  content: "Downloading";
-  display: flex;
-  justify-content: center;
-  font-size: 0.8rem;
-  color: var(--font-nav);
-  text-align: center;
-  scale: 0.8;
-}
-
-#CV-button:hover {
-  scale: 0.9;
-  transition: ease-in-out 0.3s;
-  background-color: var(--font-color);
-  color: var(--font-nav);
-  box-shadow: 0 1px 20px var(--font-nav);
-}
 
 #about-me {
   animation: slideInFromTop 0.5s ease-in-out;
@@ -193,7 +173,7 @@ footer {
   animation: slideInFromRight 1s ease-out;
 }
 
-@media screen and (max-width: 978px) {
+/* @media screen and (max-width: 978px) {
   .hideOnMobile {
     display: none !important;
   }
@@ -365,4 +345,4 @@ footer {
     order: 3;
     margin: -2px;
   }
-}
+} */

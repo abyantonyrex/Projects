@@ -38,25 +38,28 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="py-20 border-b-2 border-gray-500 mb-10"
+      className="py-16 border-b-2 border-gray-500 mb-10"
       style={{ backgroundColor: 'var(--dark-bg)' }}
     >
-      <h1 className="text-6xl font-bold text-center mb-16" style={{ color: 'var(--bg-blue)' }}>
+      <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[var(--bg-blue)]">
         Skills
       </h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 max-w-6xl mx-auto px-4">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-6 max-w-6xl mx-auto px-2 sm:px-4">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl shadow-lg p-6 transition duration-300 group hover:scale-105"
+            className="flex flex-col items-center bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-md p-4 sm:p-5 transition duration-300 group hover:scale-105"
             data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
           >
-            <img src={skill.image} alt={skill.name} className="w-16 h-16 mb-4" />
-            <span className="text-lg font-semibold text-white">{skill.name}</span>
+            <img
+              src={skill.image}
+              alt={`${skill.name} logo`}
+              className="w-10 h-10 sm:w-14 sm:h-14 mb-2 object-contain"
+            />
+            <span className="text-sm sm:text-base font-semibold text-white">{skill.name}</span>
 
-            {/* Always visible on mobile; hover reveal on larger screens */}
-            <p className="text-sm font-medium text-purple-300 text-center mt-2 sm:opacity-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition duration-300 ease-in-out">
+            <p className="hidden sm:block text-xs font-medium text-purple-300 text-center mt-1 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
               {skill.description}
             </p>
           </div>

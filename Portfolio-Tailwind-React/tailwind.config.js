@@ -6,10 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        greenyellow: '#ADFF2F',
+      },
       boxShadow: {
         'left-soft': '-10px 0 10px rgba(0, 0, 0, 0.1)',
-        'cyan-glow': '0px 0px 8px 2px rgba(255, 255, 255, 0.2)',
-
+        'cyan-glow': '0 0 20px rgba(0, 255, 255, 0.3)',
       },
       keyframes: {
         slideInFromLeft: {
