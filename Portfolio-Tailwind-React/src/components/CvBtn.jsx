@@ -1,15 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-
+const text = {
+  "Download CV": 'Download CV',
+  "Get in Touch": 'Get in Touch',
+}
 const Button = ({ onDownloadCV }) => {
   return (
     <StyledWrapper>
-      <button className="animated-button xs:scale-50 lg:scale-100" onClick={onDownloadCV}>
+      <button className="animated-button xs:scale-50 xxs:scale-50 lg:scale-100" onClick={onDownloadCV}>
         <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
         </svg>
         <span className="text">
-          Download CV
+          {text['Download CV']}
           </span>
         <span className="circle" />
         <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">

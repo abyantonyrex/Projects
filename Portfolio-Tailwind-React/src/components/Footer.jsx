@@ -119,7 +119,7 @@ const Footer = () => {
 
       {/* Footer with Social Icons */}
       <footer className="bg-black py-10">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-6xl mx-auto text-white text-lg px-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-6xl mx-auto text-white text-2xl  px-6">
           {socialLinks.map((link, index) => (
             <a
               key={index}

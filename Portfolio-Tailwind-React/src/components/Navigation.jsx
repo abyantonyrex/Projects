@@ -40,7 +40,7 @@ const Navigation = ({ onShowSidebar, onDownloadCV }) => {
   </div>
 
   {/* Right section: CV Button + Menu icon */}
-  <div className="flex items-center space-x-2 sm:space-x-4 ml-auto">
+  <div className="flex items-center space-x-2 sm:space-x-4 ml-auto ">
     <li id="CV-button" className="flex items-center">
       <Button onDownloadCV={onDownloadCV} />
     </li>

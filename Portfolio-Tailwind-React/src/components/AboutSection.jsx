@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import abyimg from "/src/img/aby-ghibili-pic.png";
 import TypewriterLoop from "./TypewriterText";
+import Button from "./CvBtn";
 
 const AboutSection = () => {
   useEffect(() => {
@@ -44,12 +45,14 @@ const AboutSection = () => {
               className="text-lg sm:text-xl font-medium"
             />
           </div>
-            <a href="#contact">
+        </div>
+            <div className="flex justify-center items-center">
+               <a href="#contact">
               <button className="border border-purple-200 bg-purple-600 hover:border-transparent hover:text-white active:bg-purple-700 rounded-md px-4 py-2 mt-4">
                 Get in Touch
               </button>
             </a>
-        </div>
+            </div>
       </div>
 
       {/* Description */}
