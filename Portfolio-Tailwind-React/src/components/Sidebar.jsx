@@ -9,14 +9,24 @@ const Sidebar = ({ visible, onHide }) => {
         ${visible ? 'translate-x-0' : 'translate-x-full'}`}
     >
       <ul className="font-medium text-2xl w-full flex flex-col items-start justify-start">
-        
+
         {/* Close Button */}
-        <li onClick={onHide} className="py-5 px-10">
-          <a className="flex justify-center" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#00fffb">
+        <li className="py-5 px-10 flex justify-center">
+          <button
+            onClick={onHide}
+            aria-label="Close Sidebar"
+            className="bg-transparent border-none p-0 focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="50px"
+              viewBox="0 -960 960 960"
+              width="50px"
+              fill="#00fffb"
+            >
               <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
             </svg>
-          </a>
+          </button>
         </li>
 
         {/* Sidebar Navigation Links */}
@@ -30,7 +40,11 @@ const Sidebar = ({ visible, onHide }) => {
             key={i}
             className="p-8 text-4xl w-full hover:bg-gray-500 text-[var(--font-color)]"
           >
-            <a className="flex justify-center" href={item.href} onClick={onHide}>
+            <a
+              className="flex justify-center"
+              href={item.href}
+              onClick={onHide}
+            >
               {item.label}
             </a>
           </li>

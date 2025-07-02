@@ -7,63 +7,63 @@ const Navigation = ({ onShowSidebar, onDownloadCV }) => {
   const [active, setActive] = useState("");
 
   return (
-    <nav id="main-bars" className="bg-black text-[var(--font-color)] p-4">
-     <ul className="flex items-center justify-between text-2xl font-bold px-4">
-  {/* Logo */}
-  <li
-    id="logo"
-    className="text-3xl md:text-2xl sm:text-xl scale-100 sm:scale-90"
-  >
-    <a href="#">Portfolio</a>
-  </li>
+    <nav id="main-bars" className="bg-black text-[var(--font-color)] p-4 w-full">
+  <div className="max-w-7xl mx-auto flex items-center justify-between">
+    
+    {/* Left: Logo */}
+    <div className="flex-shrink-0 text-3xl md:text-2xl sm:text-xl scale-100 sm:scale-90">
+      <a href="#">Portfolio</a>
+    </div>
 
-  {/* Menu items (hidden on mobile) */}
-  <div className="hidden md:flex space-x-4 ml-auto">
-    {Menu.map((item, i) => (
-      <li
-        key={i}
-        onClick={() => setActive(item)}
-        className={`p-1 text-xl rounded-xl transition duration-300 ease-in-out ${
-          active === item
-            ? "bg-violet-600 text-black"
-            : "hover:bg-gray-700 text-[var(--font-color)]"
-        }`}
-      >
-        <a
-          href={`#${item.toLowerCase()}`}
-          className="block px-4 py-2 rounded-lg"
+    {/* Center: Menu Items */}
+    <ul className="hidden md:flex flex-1 justify-center space-x-6 text-xl font-bold">
+      {Menu.map((item, i) => (
+        <li
+          key={i}
+          className={`rounded-xl transition duration-300 ease-in-out ${
+            active === item
+              ? "bg-violet-600 text-black"
+              : "hover:bg-gray-700 text-[var(--font-color)]"
+          }`}
         >
-          {item.replace("-", " ")}
-        </a>
-      </li>
-    ))}
-  </div>
+          <a
+            href={`#${item.toLowerCase()}`}
+            onClick={() => setActive(item)}
+            className="block px-4 py-2 rounded-lg"
+          >
+            {item}
+          </a>
+        </li>
+      ))}
+    </ul>
 
-  {/* Right section: CV Button + Menu icon */}
-  <div className="flex items-center space-x-2 sm:space-x-4 ml-auto ">
-    <li id="CV-button" className="flex items-center">
-      <Button onDownloadCV={onDownloadCV} />
-    </li>
+    {/* Right: CV Button and Mobile Menu Icon */}
+    <div className="flex items-center space-x-3">
+      {/* CV Button (visible on medium and up) */}
+      <div className="hidden md:flex">
+        <Button onDownloadCV={onDownloadCV} />
+      </div>
 
-    <li
-      id="menu-bar"
-      onClick={onShowSidebar}
-      className="md:hidden flex items-center justify-center bg-[var(--bg-blue)] px-3 py-2 rounded-xl cursor-pointer"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="26px"
-        viewBox="0 -960 960 960"
-        width="26px"
-        fill="#000000"
+      {/* Mobile Menu Icon (only on small screens) */}
+      <div
+        id="menu-bar"
+        onClick={onShowSidebar}
+        className="md:hidden flex items-center justify-center bg-[var(--bg-blue)] px-3 py-2 rounded-xl cursor-pointer"
       >
-        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-      </svg>
-    </li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26px"
+          viewBox="0 -960 960 960"
+          width="26px"
+          fill="#000000"
+        >
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg>
+      </div>
+    </div>
   </div>
-</ul>
+</nav>
 
-    </nav>
   );
 };
 

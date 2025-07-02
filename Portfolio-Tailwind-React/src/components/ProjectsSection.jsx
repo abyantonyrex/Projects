@@ -5,6 +5,7 @@ import p1 from "/src/img/abyproject.gif";
 import p2 from "/src/img/abycart.png";
 import p3 from "/src/img/calci.png";
 import p4 from "/src/img/portfolio.png";
+import p5 from "/src/img/p5.png"; 
 
 const ProjectsSection = () => {
   useEffect(() => {
@@ -28,6 +29,15 @@ const ProjectsSection = () => {
         "A full-stack e-commerce web app using HTML, CSS, JavaScript, Node.js, and MySQL. Supports user authentication, product listings, and cart management.",
       techStack: ["HTML", "CSS", "JavaScript", "MySQL"],
     },
+    {
+      title: "UserFlow - User Management System",
+      image: p5, 
+      url: "https://react-workouts-six.vercel.app/",
+      description:
+        "A full-stack web application for managing users. Includes features to add, view, edit, and delete users. Built using Spring Boot and React with PostgreSQL integration.",
+      techStack: ["React", "Bootstrap", "Spring Boot", "PostgreSQL", "Render"],
+    },
+
     {
       title: "Personal Portfolio",
       image: p4,
@@ -59,7 +69,7 @@ const ProjectsSection = () => {
       <section id="projects" className=" ">
         <h2 className="text-6xl font-bold text-center mb-16">Projects</h2>
 
-        <div className="grid grid-cols-1  md:grid-cols-2 gap-12 px-6 max-w-7xl mx-auto ">
+        <div className="grid grid-cols-1  md:grid-cols-2 gap-12 px-6 max-w-7xl  mx-auto ">
           {projects.map((project, index) => (
             <div
               key={index}

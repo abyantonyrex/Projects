@@ -14,21 +14,19 @@ const Footer = () => {
         form.current,
         'PerDUjF4fmeA5yFPU'
       )
-      .then(
-        () => {
-          alert('Message sent successfully!');
-          form.current.reset();
-        },
-        (error) => {
-          alert('Failed to send message. Try again.');
-          console.error(error.text);
-        }
-      );
+      .then(() => {
+        alert('Message sent successfully!');
+        form.current.reset();
+      })
+      .catch((error) => {
+        alert('Failed to send message. Try again.');
+        console.error(error.text);
+      });
   };
 
   const socialLinks = [
     {
-      name: 'Github',
+      name: 'GitHub',
       icon: 'fab fa-github',
       url: 'https://github.com/abyantonyrex/Projects',
     },
@@ -51,10 +49,10 @@ const Footer = () => {
 
   return (
     <>
-      {/* Contact Section Heading */}
+      {/* Contact Heading */}
       <h1
         id="contact"
-        className="flex justify-center items-center mt-20 text-5xl sm:text-6xl font-bold p-5 mb-4 text-white"
+        className="text-center text-white text-4xl sm:text-5xl font-extrabold mt-20 mb-6"
       >
         Contact Me
       </h1>
@@ -63,63 +61,65 @@ const Footer = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="max-w-2xl mx-auto p-6 bg-blue-100 rounded-xl shadow-md mb-20 scale-95 sm:scale-100"
+        className="max-w-2xl mx-auto bg-blue-100 p-6 rounded-xl shadow-lg mb-16"
       >
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-lg font-semibold text-black mb-2">
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            placeholder="Your name"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
-          />
+        <div className="space-y-5">
+          <div>
+            <label htmlFor="name" className="block text-lg font-medium text-black mb-1">
+              Name
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              placeholder="Your name"
+              className="w-full px-4 py-2 rounded-lg border border-gray-500 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-lg font-medium text-black mb-1">
+              Email
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="Your email"
+              className="w-full px-4 py-2 rounded-lg border border-gray-500 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="message" className="block text-lg font-medium text-black mb-1">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Your message"
+              className="w-full px-4 py-2 rounded-lg border border-gray-500 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+          </div>
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-lg font-semibold text-black mb-2">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            placeholder="Your email"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="message" className="block text-lg font-semibold text-black mb-2">
-            Message
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            rows="5"
-            required
-            placeholder="Your message"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
-          ></textarea>
-        </div>
-
-        <div className="flex justify-center pt-5">
+        <div className="flex justify-center mt-6">
           <button
             type="submit"
-            className="bg-blue-600 text-white px-10 py-4 rounded-lg hover:bg-blue-700 transition"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             Submit
           </button>
         </div>
       </form>
 
-      {/* Footer with Social Icons */}
-      <footer className="bg-black py-10">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-6xl mx-auto text-white text-2xl  px-6">
+      {/* Footer Section */}
+      <footer className="bg-black py-10 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-white text-lg">
           {socialLinks.map((link, index) => (
             <a
               key={index}
@@ -127,15 +127,15 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.name}
-              className="flex items-center justify-center space-x-2 hover:text-blue-400 transition"
+              className="flex items-center gap-3 hover:text-cyan-400 transition text-center justify-center"
             >
-              <i className={`${link.icon} text-xl text-[#00fffb] p-2 `}></i>
+              <i className={`${link.icon} text-cyan-400`}></i>
               <span>{link.name}</span>
             </a>
           ))}
         </div>
 
-        <p className="text-center text-sm text-gray-400 mt-8">
+        <p className="text-center text-gray-400 mt-10 text-xs sm:text-sm leading-snug break-words">
           &copy; {new Date().getFullYear()} Aby Antony Rex. All rights reserved.
         </p>
       </footer>

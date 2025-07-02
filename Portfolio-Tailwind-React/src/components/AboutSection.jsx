@@ -30,7 +30,9 @@ const AboutSection = () => {
             alt="Aby Antony Rex"
           />
           <div className="space-y-2 text-center sm:text-left">
-            <h2 className="text-purple-400 text-2xl sm:text-3xl font-semibold">Hi 👋</h2>
+            <h2 className="text-purple-400 text-2xl sm:text-3xl font-semibold">
+              Hi 👋
+            </h2>
             <p className="text-xl sm:text-2xl font-semibold text-purple-400">
               I'm Aby Antony Rex
             </p>
@@ -46,13 +48,14 @@ const AboutSection = () => {
             />
           </div>
         </div>
-            <div className="flex justify-center items-center">
-               <a href="#contact">
-              <button className="border border-purple-200 bg-purple-600 hover:border-transparent hover:text-white active:bg-purple-700 rounded-md px-4 py-2 mt-4">
-                Get in Touch
-              </button>
-            </a>
-            </div>
+        <div className="flex justify-center items-center">
+          <a
+            href="#contact"
+            className="inline-block min-w-[48px] min-h-[48px] text-center border border-purple-200 bg-purple-600 hover:border-transparent hover:text-white active:bg-purple-700 rounded-md px-4 py-2 mt-4"
+          >
+            Get in Touch
+          </a>
+        </div>
       </div>
 
       {/* Description */}
@@ -72,8 +75,8 @@ const AboutSection = () => {
             <span className="text-blue-300">React</span>. On the server side, I
             use <span className="text-green-400">Node.js</span>,{" "}
             <span className="text-emerald-400">Express</span>, and{" "}
-            <span className="text-indigo-400">MongoDB</span>. I'm always
-            excited to learn, grow, and take on{" "}
+            <span className="text-indigo-400">MongoDB</span>. I'm always excited
+            to learn, grow, and take on{" "}
             <span className="font-medium text-pink-400">new challenges</span>{" "}
             with creativity and energy.
           </p>
