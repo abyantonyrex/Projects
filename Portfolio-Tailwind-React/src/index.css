@@ -36,7 +36,7 @@ a:target {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--dark-bg);
+  /* background-color: var(--dark-bg); */
   box-shadow: 0 1px 7px rgba(255, 255, 255, 0.6);
   padding: 1rem;
   font-family: Georgia, 'Times New Roman', Times, serif;

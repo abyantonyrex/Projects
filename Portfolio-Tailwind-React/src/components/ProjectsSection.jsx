@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       techStack: ["HTML", "CSS", "JavaScript", "MySQL"],
     },
     {
-      title: "UserFlow - User Management System",
+      title: "User Management System",
       image: p5, 
       url: "https://react-workouts-six.vercel.app/",
       description:
@@ -65,25 +65,25 @@ const ProjectsSection = () => {
   };
 
   return (
-    <div className="border-b-2 border-gray-500 mb-10 py-20 ">
-      <section id="projects" className=" ">
+    <div className="border-b-2 border-gray-500 py-32 bg-[url('/image/bg-main.jpg')] bg-cover bg-center"  id="projects">
+      <section className=" ">
         <h2 className="text-6xl font-bold text-center mb-16">Projects</h2>
 
-        <div className="grid grid-cols-1  md:grid-cols-2 gap-12 px-6 max-w-7xl  mx-auto ">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-12 px-6 max-w-11xl  mx-auto ">
           {projects.map((project, index) => (
             <div
               key={index}
               className="project-card bg-gray-900 rounded-3xl transition duration-300 hover:shadow-2xl shadow-cyan-glow"
               data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
             >
-              <h3 className="text-4xl text-center p-6 text-white font-semibold ">
+              <h3 className="text-2xl text-center p-6 text-white font-semibold ">
                 {project.title}
               </h3>
 
               <img
                 src={project.image}
                 alt={`${project.title} screenshot`}
-                className="rounded-3xl w-full max-w-md h-[250px] object-cover cursor-pointer transition-transform duration-500 hover:scale-95 hover:shadow-lg mx-auto mb-6"
+                className="rounded-3xl w-full max-w-sm h-[180px] object-cover cursor-pointer transition-transform duration-500 hover:scale-95 hover:shadow-lg mx-auto mb-6"
               />
               <div className="flex flex-wrap justify-center gap-2 mb-4">
                 {project.techStack.map((tech, i) => (
@@ -95,7 +95,7 @@ const ProjectsSection = () => {
                   </span>
                 ))}
               </div>
-              <p className="text-xl text-center text-gray-200 w-11/12 md:w-2/3 mx-auto p-4 mb-4">
+              <p className="text-md text-center text-gray-200 w-11/12 md:w-2/3 mx-auto p-4 mb-4">
                 {project.description}
               </p>
 

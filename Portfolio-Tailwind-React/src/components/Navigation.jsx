@@ -7,7 +7,7 @@ const Navigation = ({ onShowSidebar, onDownloadCV }) => {
   const [active, setActive] = useState("");
 
   return (
-    <nav id="main-bars" className="bg-black text-[var(--font-color)] p-4 w-full">
+    <nav id="main-bars" className=" text-[var(--font-color)] p-4 w-full  bg-black">
   <div className="max-w-7xl mx-auto flex items-center justify-between">
     
     {/* Left: Logo */}

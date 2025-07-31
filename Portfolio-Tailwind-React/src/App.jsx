@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection'
 import SkillsSection from './components/SkillsSection'
 import ProjectsSection from './components/ProjectsSection'
 import Footer from './components/Footer'
+import ContactForm from './components/ContactForm'
 
 function App() {
   const [sidebarVisible, setSidebarVisible] = useState(false)
@@ -23,12 +24,13 @@ function App() {
   }
 
   return (
-    <div className="p-0 m-0">
+    <div className="p-0 m-0  ">
       <Sidebar visible={sidebarVisible} onHide={hideSidebar} />
       <Navigation onShowSidebar={showSidebar} onDownloadCV={downloadCV} />
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
+      <ContactForm/>
       <Footer />
     </div>
   )
