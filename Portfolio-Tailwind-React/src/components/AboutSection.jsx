@@ -69,7 +69,7 @@ const AboutSection = () => {
         </div>
 
         {/* Description (always 3rd) */}
-        <div className="w-full sm:w-4/5 md:w-1/3 relative flex justify-center order-3">
+        <div className="w-full sm:w-4/5 md:w-1/3 relative flex justify-center order-3" data-aos="zoom-in">
           <div className="animate-pulse-fast absolute z-0 h-72 w-72 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 opacity-20 blur-3xl" />
           <div className="relative z-10 w-full max-w-md p-6 border border-white/20 bg-white/10 text-center shadow-2xl ring-2 ring-purple-400/30 backdrop-blur-lg rounded-3xl">
             <p className="text-sm sm:text-lg leading-relaxed tracking-wide text-white">
