@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import abyimg from "../img/aby-ghibili-pic.png";
+import abyimg from "../img/aby-ghibili-pic.webp";
 import TypewriterLoop from "./TypewriterText";
 
 const AboutSection = () => {

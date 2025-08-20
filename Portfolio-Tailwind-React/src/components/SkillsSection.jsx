@@ -2,18 +2,18 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import s1 from "../img/html-png-removebg-preview.png";
-import s2 from "../img/css-png-removebg-preview.png";
-import s3 from "../img/js-png-removebg-preview.png";
-import s4 from "../img/react-png-removebg-preview.png";
-import s5 from "../img/tailwind-png-removebg-preview.png";
-import s6 from "../img/bootstrap-png-removebg-preview.png";
-import s7 from "../img/node-png-removebg-preview.png";
-import s8 from "../img/express-png-removebg-preview.png";
-import s9 from "../img/mysql-png-removebg-preview.png";
-import s10 from "../img/mongodb-png-removebg-preview.png";
-import s11 from "../img/java-png-removebg-preview.png";
-import s12 from "../img/springboot-png-removebg-preview.png";
+import s1 from "../img/html-png-removebg-preview.webp";
+import s2 from "../img/css-png-removebg-preview.webp";
+import s3 from "../img/js-png-removebg-preview.webp";
+import s4 from "../img/react-png-removebg-preview.webp";
+import s5 from "../img/tailwind-png-removebg-preview.webp";
+import s6 from "../img/bootstrap-png-removebg-preview.webp";
+import s7 from "../img/node-png-removebg-preview.webp";
+import s8 from "../img/express-png-removebg-preview.webp";
+import s9 from "../img/mysql-png-removebg-preview.webp";
+import s10 from "../img/mongodb-png-removebg-preview.webp";
+import s11 from "../img/java-png-removebg-preview.webp";
+import s12 from "../img/springboot-png-removebg-preview.webp";
 
 const SkillsSection = () => {
   useEffect(() => {

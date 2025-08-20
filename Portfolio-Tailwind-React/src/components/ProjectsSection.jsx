@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import p1 from "/src/img/abyproject.gif";
-import p2 from "/src/img/abycart.png";
-import p3 from "/src/img/calci.png";
-import p4 from "/src/img/portfolio.png";
-import p5 from "/src/img/p5.png"; 
+import p1 from "/src/img/abyproject.webp";
+import p2 from "/src/img/abycart.webp";
+import p3 from "/src/img/calci.webp";
+import p4 from "/src/img/portfolio.webp";
+import p5 from "/src/img/p5.webp"; 
 
 const ProjectsSection = () => {
   useEffect(() => {
