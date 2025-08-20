@@ -10,7 +10,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="border-b-2 border-gray-500 min-h-screen pt-24 bg-[url('/image/bg-main.jpg')] bg-cover bg-center relative text-white">
+    <section className="border-b-2 border-gray-500 max-h-screen pt-24 bg-[url('/image/bg-main.jpg')] bg-cover bg-center relative text-white">
       {/* Title */}
       <div
         id="about"
@@ -40,10 +40,10 @@ const AboutSection = () => {
             className="flex flex-col justify-center items-center gap-4 p-6 border border-gray-200 rounded-2xl shadow-xl hover:shadow-2xl transition bg-white/10 backdrop-blur-md"
             data-aos="fade-up"
           >
-            <h2 className="text-purple-400 text-2xl sm:text-3xl font-semibold text-center xsm:text-white xsm:text-shadow-lg">
+            <h2 className="text-white  text-2xl sm:text-3xl font-semibold text-center xsm:text-white xsm:text-shadow-lg">
               Hi 👋 Everyone
             </h2>
-            <p className="text-xl sm:text-2xl font-semibold text-purple-400 xsm:text-white xsm:text-shadow-lg text-center">
+            <p className="text-xl sm:text-2xl font-semibold text- xsm:text-white xsm:text-shadow-lg text-center">
               I'm Aby Antony Rex
             </p>
             <TypewriterLoop

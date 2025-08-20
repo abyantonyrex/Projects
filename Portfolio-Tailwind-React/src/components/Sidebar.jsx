@@ -4,14 +4,14 @@ const Sidebar = ({ visible, onHide }) => {
   return (
     <nav
       id="sidebar"
-      className={`fixed top-0 right-0 h-screen w-full sm:w-[250px] z-[999] bg-black 
+      className={`fixed top-0 right-0 max-h-screen w-full sm:w-[250px] z-[999] bg-black 
         shadow-[var(--box-shadow-bg)] transform transition-transform duration-500
         ${visible ? 'translate-x-0' : 'translate-x-full'}`}
     >
       <ul className="font-medium text-2xl w-full flex flex-col items-start justify-start">
 
         {/* Close Button */}
-        <li className="py-5 px-10 flex justify-center">
+        <li className="py-5 px-10 flex  justify-center">
           <button
             onClick={onHide}
             aria-label="Close Sidebar"
@@ -38,10 +38,10 @@ const Sidebar = ({ visible, onHide }) => {
         ].map((item, i) => (
           <li
             key={i}
-            className="p-8 text-4xl w-full hover:bg-gray-500 text-[var(--font-color)]"
+            className="p-8 text-4xl w-full h-1/2 hover:bg-gray-500 text-[var(--font-color)] border-b-2 border-gray-500 transition duration-300 "
           >
             <a
-              className="flex justify-center"
+              className="flex  justify-center"
               href={item.href}
               onClick={onHide}
             >
