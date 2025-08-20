@@ -6,7 +6,7 @@ import TypewriterLoop from "./TypewriterText";
 
 const AboutSection = () => {
   useEffect(() => {
-    AOS.init({ duration: 700, once: true });
+    AOS.init({ duration: 500, once: true , easing: "ease-in-out" });
   }, []);
 
   return (
