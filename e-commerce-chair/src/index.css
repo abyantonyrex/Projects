@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@theme {
+  --breakpoint-xsm: 650px;
+  --breakpoint-xxsm: 350px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
