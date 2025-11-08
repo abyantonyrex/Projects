@@ -6,13 +6,21 @@ import p2 from "/src/img/abycart.webp";
 import p3 from "/src/img/calci.webp";
 import p4 from "/src/img/portfolio.webp";
 import p5 from "/src/img/p5.webp"; 
-
+import p6 from "/src/img/p6.png";
 const ProjectsSection = () => {
   useEffect(() => {
     AOS.init({ duration: 600, once: false });
   }, []);
 
   const projects = [
+    {
+      title: "Ecommerce Website (Chair) - GRK Enterprises",
+      image: p6,
+      url: "https://grk-enterprises.vercel.app",
+      description:
+        "A ecommerce website for a chair company built with React , Tailwind , Emailjs and Vercel. Includes a responsive design and a clean UI.",
+      techStack: ["React", "Tailwind","Emailjs" , "Vercel"],
+    },
     {
       title: "Product Management System",
       image: p1,
@@ -41,7 +49,7 @@ const ProjectsSection = () => {
     {
       title: "Personal Portfolio",
       image: p4,
-      url: "https://abyrex-portfolio.vercel.app/",
+      url: "https://abyrex-react-portfolio.vercel.app/",
       description:
         "A responsive portfolio site showcasing my skills, projects, and background. Built with HTML, CSS, and a mobile-first design.",
       techStack: ["HTML", "CSS", "JavaScript"],
