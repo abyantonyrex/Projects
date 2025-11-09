@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import abyimg from "../img/aby-ghibili-pic.webp";
+// import abyimg from "../img/aby-ghibili-pic.webp";
+import abyPic from "../img/abyPic.webp";
 import TypewriterLoop from "./TypewriterText";
 
 const AboutSection = () => {
@@ -13,12 +14,12 @@ const AboutSection = () => {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="relative text-white border-b-2 border-gray-500 pt-24 bg-cover bg-center bg-[url('/image/bg-main.jpg')]"
+      className="relative text-white pb-10 border-b-2 border-gray-500 pt-16 bg-cover bg-center bg-[url('/image/bg-main.jpg')]"
     >
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-black/40 -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <header className="text-center mb-12">
           <h1
@@ -37,11 +38,11 @@ const AboutSection = () => {
             data-aos="zoom-in"
           >
             <img
-              src={abyimg}
+              src={abyPic}
               alt="Aby Antony Rex"
               loading="lazy"
               decoding="async"
-              className="w-3/4 sm:w-4/6 md:w-64 lg:w-4/6 xl:w-11/12 rounded-3xl shadow-2xl ring-1 ring-white/10 motion-safe:animate-float z-10"
+              className="w-3/4 sm:w-4/6 md:w-64 lg:w-4/6 xl:w-11/12 rounded-full shadow-2xl ring-1 ring-white/10 motion-safe:animate-float z-10"
             />
           </div>
 

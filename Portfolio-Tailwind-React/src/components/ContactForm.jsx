@@ -19,14 +19,14 @@ const ContactForm = () => {
       })
       .catch((error) => {
         alert("Failed to send message. Try again.");
-        console.error(error.text);
+        console.error("EmailJS Error:", error);
       });
   };
   return (
-    <div className="bg-[url('/image/bg-main.jpg')] bg-cover bg-center max-h-screen py-10 px-4" id="contact">
+    <div className="bg-[url('/image/bg-main.jpg')] bg-cover bg-center py-20 px-4" id="contact">
       {/* Contact Heading */}
       <h1
-        className="text-center  text-4xl sm:text-5xl font-extrabold mt-20 mb-6"
+        className="text-center text-4xl sm:text-5xl font-extrabold mb-8 text-white"
       >
         Contact Me
       </h1>
@@ -35,7 +35,7 @@ const ContactForm = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="max-w-2xl mx-auto bg-blue-100 p-6 rounded-xl shadow-lg mb-16"
+        className="max-w-2xl mx-auto bg-blue-100 p-8 rounded-xl shadow-lg mb-0"
       >
         <div className="space-y-5">
           <div>

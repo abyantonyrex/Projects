@@ -84,12 +84,12 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-32 border-b-2 border-gray-500 bg-[url('/image/bg-main.jpg')] bg-cover bg-center">
-      <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[var(--bg-blue)]">
+    <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8 border-b-2 border-gray-500 bg-[url('/image/bg-main.jpg')] bg-cover bg-center">
+      <h1 className="text-4xl sm:text-5xl font-bold text-center py-10 text-[var(--bg-blue)]">
         Skills
       </h1>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-6 max-w-6xl mx-auto px-2 sm:px-4">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-6 max-w-6xl mx-auto">
         {skills.map((skill, index) => (
           <div
             key={index}

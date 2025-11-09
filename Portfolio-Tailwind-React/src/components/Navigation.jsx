@@ -1,10 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./CvBtn";
 
 const Menu = ["About", "Skills", "Projects", "Contact"];
 
 const Navigation = ({ onShowSidebar, onDownloadCV }) => {
   const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const sections = Menu.map((item) => document.getElementById(item.toLowerCase()));
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -60% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          const menuItem = sectionId.charAt(0).toUpperCase() + sectionId.slice(1);
+          setActive(menuItem);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((section) => {
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
 
   return (
     <nav id="main-bars" className=" text-[var(--font-color)] p-4 w-full  bg-black">
@@ -22,8 +58,8 @@ const Navigation = ({ onShowSidebar, onDownloadCV }) => {
           key={i}
           className={`rounded-xl transition duration-300 ease-in-out ${
             active === item
-              ? "bg-violet-600 text-black"
-              : "hover:bg-gray-700 text-[var(--font-color)]"
+              ? "bg-greenyellow text-black"
+              : "hover:bg-blue-500 hover:text-black text-[var(--font-color)]"
           }`}
         >
           <a
@@ -38,9 +74,9 @@ const Navigation = ({ onShowSidebar, onDownloadCV }) => {
     </ul>
 
     {/* Right: CV Button and Mobile Menu Icon */}
-    <div className="flex items-center space-x-3">
-      {/* CV Button (visible on medium and up) */}
-      <div className="hidden md:flex">
+    <div className="flex items-center space-x-2 sm:space-x-3">
+      {/* CV Button (visible on all screens) */}
+      <div className="flex">
         <Button onDownloadCV={onDownloadCV} />
       </div>
 

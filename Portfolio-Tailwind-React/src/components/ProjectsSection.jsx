@@ -77,11 +77,11 @@ const ProjectsSection = () => {
       <section className=" ">
         <h2 className="text-6xl font-bold text-center mb-16">Projects</h2>
 
-        <div className="grid grid-cols-1  md:grid-cols-3 gap-12 px-6 max-w-11xl  mx-auto ">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-12 px-6 max-w-10xl  mx-auto ">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card bg-gray-900 rounded-3xl transition duration-300 hover:shadow-2xl shadow-cyan-glow"
+              className="project-card bg-gray-900 p-4 rounded-3xl transition duration-300 hover:shadow-2xl shadow-cyan-glow"
               data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
             >
               <h3 className="text-2xl text-center p-6 text-white font-semibold ">
@@ -91,7 +91,7 @@ const ProjectsSection = () => {
               <img
                 src={project.image}
                 alt={`${project.title} screenshot`}
-                className="rounded-3xl w-full max-w-sm h-[180px] object-cover cursor-pointer transition-transform duration-500 hover:scale-95 hover:shadow-lg mx-auto mb-6"
+                className="rounded-3xl w-full max-w-sm h-[180px] object-contain cursor-pointer transition-transform duration-500 hover:scale-95 hover:shadow-lg mx-auto mb-6"
               />
               <div className="flex flex-wrap justify-center gap-2 mb-4">
                 {project.techStack.map((tech, i) => (
